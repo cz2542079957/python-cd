@@ -7,6 +7,7 @@ import cudf, gc
 from src.file_manager import FileManager
 from src.co_visitation_matrix import CoVisitationMatrix
 from src.handcrafted_rules import HandCraftedRules
+from utils.show_pred import show_pred
 
 VER = 1  # 版本号
 print(f'Version {VER}\nRAPIDS version {cudf.__version__}')
@@ -26,7 +27,10 @@ if __name__ == '__main__':
     # file_manager.clear_cache()
     # gc.collect()
 
-    # 使用共现矩阵预测
+    # # 使用共现矩阵预测
     # co_visitation_matrix.load_metrix()
     # handcrafted_rules.train(co_visitation_matrix)
     # handcrafted_rules.save()
+
+    # 展示数据
+    show_pred()

@@ -53,3 +53,6 @@ class FileManager:
     # pqt转换为dict
     def pqt_to_dict(self, df):
         return df.groupby('aid_x').aid_y.apply(list).to_dict()
+
+    def load_predicted(self):
+        return pd.read_csv("./submission.csv")
